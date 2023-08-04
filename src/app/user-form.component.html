@@ -1,0 +1,22 @@
+<!-- <h1>{{ title }}</h1>
+<form [formGroup]="userForm" (ngSubmit)="submitHandler(userForm)">
+  <label>Name</label>
+  <input type="text" formControlName="name" />
+  <br/>
+  <label>Address</label>
+  <input type="text" formControlName="address" />
+  <div *ngIf="userForm.get('address')?.invalid &&
+  (userForm.get('address')?.dirty || userForm.get('address')?.touched)">
+Address is required</div>
+<br/>
+<label>Email</label>
+<input type="email" formControlName="email" />
+<div *ngIf="userForm.get('email')?.invalid &&
+  (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
+Please enter valid email</div>
+<br/>
+<label>Contact</label>
+<input type="number" formControlName="phone" />
+<br/>
+<button [disabled]="!userForm.valid" type="submit">Submit</button>
+</form> -->

@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<form #loginForm="ngForm" (ngSubmit)="userLogin()" >
+  <label>Username:</label> <br>
+  <input type="text" placeholder="Enter username..." name="name" ngModel>
+  <br> 
+  <span style="color: red;" *ngIf = "user && user.invalid && user.touched">
+This field is required.
+  </span><br>
+  <label>Email:</label> <br>
+  <input type="email" placeholder="Enter email..." name="email">
+  <br> 
+  <span style="color: red;" *ngIf = "user && user.invalid && user.touched">
+    This field is required.
+      </span><br>
+      <label>Password:</label> <br>
+  <input type="password" placeholder="Enter password..." name="password">
+  <br> 
+  <span style="color: red;" *ngIf = "user && user.invalid && user.touched">
+    This field is required.
+      </span><br>
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>
